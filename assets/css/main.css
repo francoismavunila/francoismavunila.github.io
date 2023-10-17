@@ -159,7 +159,7 @@ input, select, textarea {
 		-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-		border-bottom: dotted 1px;
+		/* border-bottom: dotted 1px; */
 		text-decoration: none;
 	}
 
@@ -3234,7 +3234,7 @@ input, select, textarea {
 			width: 100%;
 			height: 100%;
 			background-color: #212931;
-			background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/bg.jpg");
+			background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url("../../images/bg2.png");
 			background-size: auto,								auto,														100% auto;
 			background-position: center,								center,														top center;
 			background-repeat: repeat,								no-repeat,													no-repeat;
@@ -3609,16 +3609,16 @@ input, select, textarea {
 	position: fixed;
 	top: 0;
 	display: flex;
-	background-color: #222222;
+	background-color: rgb(2, 7, 20,0.5);
 	width: 100%;
 	z-index: 99;
-	padding-top: 15px;
+	padding-top: 5px;
 	padding-left: 15px;
 	padding-right: 15px;
+	max-height: 60px;
 }
 .sticky ul li{
 	display: inline;
-
 }
 
 	#nav {
@@ -3627,11 +3627,12 @@ input, select, textarea {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
+		display: none;
 		-moz-transition: -moz-transform 1s ease, opacity 1s ease;
 		-webkit-transition: -webkit-transform 1s ease, opacity 1s ease;
 		-ms-transition: -ms-transform 1s ease, opacity 1s ease;
 		transition: transform 1s ease, opacity 1s ease;
-		background: rgba(255, 255, 255, 0.175);
+		background: rgba(0, 0, 0, 0.175);
 		height: 4rem;
 		line-height: 4rem;
 		margin: -4rem auto 0 auto;
@@ -3692,6 +3693,9 @@ input, select, textarea {
 
 		#nav hr {
 			border-bottom-color: #ffffff;
+		}
+		#nav ul{
+			background-color: #000000;
 		}
 
 		#nav ul.links {
@@ -4585,9 +4589,9 @@ input, select, textarea {
 		transition: transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
 		display: none;
 		-webkit-overflow-scrolling: touch;
-		background: #ffffff;
+		background: #020714;
 		box-shadow: none;
-		color: #212931;
+		color: #ab9217;
 		height: 100%;
 		max-width: 80%;
 		overflow-y: auto;
@@ -4619,6 +4623,10 @@ input, select, textarea {
 					letter-spacing: 0.075em;
 					padding: 0.75rem 0;
 					text-transform: uppercase;
+					color: #ab9217;
+				}
+				#navPanel .icon li a{
+					color: #ab9217;
 				}
 
 				#navPanel .links li:first-child {
@@ -4718,6 +4726,7 @@ input, select, textarea {
 	.profileImg{
 		border-radius: 50%;
 		width: 60%;
+		filter: brightness(0.);
 	}
 	@media screen and (min-width: 786px) {
 
@@ -4771,7 +4780,7 @@ input, select, textarea {
 
 	.sticky a {
 		color: #ffffff;
-		border-bottom-color: rgba(255, 255, 255, 0.5);
+		/* border-bottom-color: rgba(255, 255, 255, 0.5); */
 	}
 
 	.sticky a:hover {
@@ -4803,7 +4812,9 @@ input, select, textarea {
 		font-weight: 900;
 		letter-spacing: 0.075em;
 	}
-
+   #name img{
+	height: 50px;
+   }
 	.sticky ul.links {
 		display: -moz-flex;
 		display: -webkit-flex;
@@ -4818,12 +4829,13 @@ input, select, textarea {
 		-ms-flex-shrink: 1;
 		flex-shrink: 1;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
-		font-weight: 900;
+		/* font-weight: 900; */
 		letter-spacing: 0.075em;
 		list-style: none;
 		margin-bottom: 0;
 		padding-left: 0;
 		text-transform: uppercase;
+		align-items: center;
 	}
 
 	.sticky ul.links li {
@@ -4840,11 +4852,12 @@ input, select, textarea {
 				font-size: 0.8rem;
 				outline: none;
 				padding: 0 2rem;
+				font-size: 12px;
 			}
 
 			.sticky ul.links li a:hover {
 					color: inherit !important;
-					background-color: rgba(255, 255, 255, 0.5);
+					background-color: #ab9217;
 				}
 
 			.sticky ul.links li.active {
@@ -4860,6 +4873,7 @@ input, select, textarea {
 					}
 
 	.sticky ul.icons {
+		display: flex;
 		-moz-flex-grow: 0;
 		-webkit-flex-grow: 0;
 		-ms-flex-grow: 0;
@@ -4869,6 +4883,7 @@ input, select, textarea {
 		-ms-flex-shrink: 0;
 		flex-shrink: 0;
 		margin-bottom: 0;
+		align-items: center;
 	}
 
 #skills{
@@ -4957,4 +4972,111 @@ input, select, textarea {
 	background-color: #000000;
     color: #ffffff;
 	border: none;
+  }
+
+  @keyframes typing {
+	from {
+	  width: 0;
+	}
+  }
+  
+  .typing-text {
+	overflow: hidden;
+	white-space: nowrap;
+	animation: typing 3s steps(40, end);
+  }
+  
+  .carousel-icons {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+  }
+  
+  .carousel-icon {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+  
+  .carousel-icon i {
+	font-size: 24px;
+	margin-bottom: 10px;
+  }
+  
+  .carousel-icon span {
+	font-size: 14px;
+	text-align: center;
+  }
+
+  #typing-val{
+	color: #ab9217;
+  }
+  .career-summary {
+	padding: 10px;
+	/* background-color: #f5f5f5; */
+  }
+  
+  .timeline {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+  
+  .timeline-item {
+	position: relative;
+	width: 100%;
+	padding: 20px;
+  }
+  
+  .timeline-content {
+	position: relative;
+	padding: 2px;
+	/* background-color: #fff; */
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .timeline-content h3 {
+	margin: 0;
+	font-size: 16px;
+	font-weight: bold;
+  }
+  
+  .timeline-content h4 {
+	margin-top: 10px;
+	margin-bottom: 5px;
+	font-size: 18px;
+	font-weight: bold;
+  }
+  
+  .timeline-content p {
+	margin: 0;
+	font-size: 14px;
+  }
+  
+  @media (min-width: 768px) {
+	.timeline {
+	  flex-direction: row;
+	  justify-content: center;
+	}
+  
+	.timeline-item {
+	  width: 50%;
+	}
+	.career-summary {
+		padding: 40px;
+		/* background-color: #f5f5f5; */
+	  }
+  }
+
+  #btn {
+	display: inline-block;
+	background-color: #e2e2e2;
+	text-decoration: none;
+	border-radius: 4px;
+	transition: background-color 0.3s ease;
+  }
+  
+  #btn:hover {
+	background-color: #717981;
   }
