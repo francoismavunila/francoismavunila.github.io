@@ -3779,7 +3779,7 @@ input, select, textarea {
 /* Main */
 
 	#main {
-		background-color: rgb(255,255,255,0.1);
+		/* background-color: rgb(255,255,255,0.1); */
 		position: relative;
 		margin: 0 auto;
 		width: calc(100% - 4rem);
@@ -5034,6 +5034,8 @@ input, select, textarea {
 	/* background-color: #fff; */
 	border-radius: 8px;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	background-color: rgb(22,22,22,0.6);
+	padding: 20px;
   }
   
   .timeline-content h3 {
@@ -5080,3 +5082,46 @@ input, select, textarea {
   #btn:hover {
 	background-color: #717981;
   }
+
+
+
+
+  .core-values-section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	width: 100%;
+  }
+
+  .core-value-card {
+	flex-basis: 300px;
+	margin: 10px;
+	padding: 20px;
+	border-radius: 5px;
+	text-align: center;
+	background-color: rgb(22,22,22,0.4);
+	max-height: 420px;
+	min-height: 420px;
+  }
+
+  .core-value-card img {
+	width: 80%;
+	max-width: 200px;
+	height: auto;
+	margin-bottom: 20px;
+	border-radius: 50%;
+  }
+
+
+
+  @media screen and (max-width: 768px) {
+	.core-value-card {
+	  flex-basis: 100%;
+	}
+  }
+
+.position{
+	color: #ab9217;
+}
