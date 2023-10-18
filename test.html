@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Portfolio</title>
+  <style>
+    .carousel-container {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .carousel {
+      display: flex;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .carousel-item {
+      flex: 0 0 100%;
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <h2>Projects</h2>
+
+  <div class="carousel-container">
+    <div class="carousel">
+      <!-- Robotics Club -->
+      <div class="carousel-item">
+        <img src="path/to/robotics-club-image1.jpg" alt="Robotics Club Image 1">
+      </div>
+      <div class="carousel-item">
+        <img src="path/to/robotics-club-image2.jpg" alt="Robotics Club Image 2">
+      </div>
+      <div class="carousel-item">
+        <img src="./images/bg2.png" alt="Robotics Club Image 3">
+      </div>
+
+      <!-- World Robot Olympiad -->
+      <div class="carousel-item">
+        <img src="./images/bg2.png" alt="World Robot Olympiad Image 1">
+      </div>
+      <div class="carousel-item">
+        <img src="./images/bg2.png" alt="World Robot Olympiad Image 2">
+      </div>
+      <div class="carousel-item">
+        <img src="./images/bg2.png" alt="World Robot Olympiad Image 3">
+      </div>
+
+      <!-- Web Design Projects -->
+      <div class="carousel-item">
+        <img src="./images/bg2.png" alt="Web Design Project Image 1">
+      </div>
+      <div class="carousel-item">
+        <img src="./images/bg2.png" alt="Web Design Project Image 2">
+      </div>
+      <div class="carousel-item">
+        <img src="./images/bg2.png" alt="Web Design Project Image 3">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript for carousel functionality
+    const carousel = document.querySelector('.carousel');
+    const carouselItems = document.querySelectorAll('.carousel-item');
+    const numItems = carouselItems.length;
+    let currentIndex = 0;
+
+    function showItem(index) {
+      if (index < 0 || index >= numItems) {
+        return;
+      }
+
+      carousel.style.transform = `translateX(-${index * 100}%)`;
+      currentIndex = index;
+    }
+
+    function showNextItem() {
+      showItem(currentIndex + 1);
+    }
+
+    function showPrevItem() {
+      showItem(currentIndex - 1);
+    }
+
+    // Add event listeners for next and previous buttons
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('carousel-next').addEventListener('click', showNextItem);
+      document.getElementById('carousel-prev').addEventListener('click', showPrevItem);
+    });
+  </script>
+</body>
+</html>
