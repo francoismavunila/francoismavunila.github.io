@@ -1,94 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My Portfolio</title>
   <style>
-    .carousel-container {
-      width: 100%;
-      overflow: hidden;
+    /* CSS for mobile responsiveness */
+    @media only screen and (max-width: 600px) {
+      .project-container {
+        flex-direction: column;
+      }
+      .project-image {
+        margin-bottom: 10px;
+      }
     }
-
-    .carousel {
+    /* CSS for desktop view */
+    .project-container {
       display: flex;
-      transition: transform 0.3s ease-in-out;
+      align-items: center;
+      margin-bottom: 30px;
     }
-
-    .carousel-item {
-      flex: 0 0 100%;
-      max-width: 100%;
-      height: auto;
+    .project-image {
+      width: 300px;
+      margin-right: 20px;
+      /* Add additional styling as per your requirements */
+    }
+    .project-description {
+      /* Add additional styling as per your requirements */
     }
   </style>
 </head>
 <body>
-  <h2>Projects</h2>
-
-  <div class="carousel-container">
-    <div class="carousel">
-      <!-- Robotics Club -->
-      <div class="carousel-item">
-        <img src="path/to/robotics-club-image1.jpg" alt="Robotics Club Image 1">
-      </div>
-      <div class="carousel-item">
-        <img src="path/to/robotics-club-image2.jpg" alt="Robotics Club Image 2">
-      </div>
-      <div class="carousel-item">
-        <img src="./images/bg2.png" alt="Robotics Club Image 3">
-      </div>
-
-      <!-- World Robot Olympiad -->
-      <div class="carousel-item">
-        <img src="./images/bg2.png" alt="World Robot Olympiad Image 1">
-      </div>
-      <div class="carousel-item">
-        <img src="./images/bg2.png" alt="World Robot Olympiad Image 2">
-      </div>
-      <div class="carousel-item">
-        <img src="./images/bg2.png" alt="World Robot Olympiad Image 3">
-      </div>
-
-      <!-- Web Design Projects -->
-      <div class="carousel-item">
-        <img src="./images/bg2.png" alt="Web Design Project Image 1">
-      </div>
-      <div class="carousel-item">
-        <img src="./images/bg2.png" alt="Web Design Project Image 2">
-      </div>
-      <div class="carousel-item">
-        <img src="./images/bg2.png" alt="Web Design Project Image 3">
+  <section>
+    <div class="project-container">
+      <img class="project-image" src="project1.jpg" alt="Project 1">
+      <div class="project-description">
+        <h3>Project 1</h3>
+        <p>This is the description of Project 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed gravida elit. Nullam volutpat felis ut semper tincidunt.</p>
       </div>
     </div>
-  </div>
-
-  <script>
-    // JavaScript for carousel functionality
-    const carousel = document.querySelector('.carousel');
-    const carouselItems = document.querySelectorAll('.carousel-item');
-    const numItems = carouselItems.length;
-    let currentIndex = 0;
-
-    function showItem(index) {
-      if (index < 0 || index >= numItems) {
-        return;
-      }
-
-      carousel.style.transform = `translateX(-${index * 100}%)`;
-      currentIndex = index;
-    }
-
-    function showNextItem() {
-      showItem(currentIndex + 1);
-    }
-
-    function showPrevItem() {
-      showItem(currentIndex - 1);
-    }
-
-    // Add event listeners for next and previous buttons
-    document.addEventListener('DOMContentLoaded', () => {
-      document.getElementById('carousel-next').addEventListener('click', showNextItem);
-      document.getElementById('carousel-prev').addEventListener('click', showPrevItem);
-    });
-  </script>
+    <div class="project-container">
+      <img class="project-image" src="project2.jpg" alt="Project 2">
+      <div class="project-description">
+        <h3>Project 2</h3>
+        <p>This is the description of Project 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed gravida elit. Nullam volutpat felis ut semper tincidunt.</p>
+      </div>
+    </div>
+    <!-- Add more project containers as needed -->
+  </section>
 </body>
 </html>
